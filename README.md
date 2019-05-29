@@ -15,3 +15,20 @@ COPY spring-boot-app-0.0.1-SNAPSHOT.war /app.war //Mình copy file war từ fold
 //run application with this command line  <br>
 CMD ["/usr/bin/java", "-jar", "-Dspring.profiles.active=default", "/app.war"] // Run command để chạy file jar như bình thường <br>
 
+## Bước 3 : Cấu hình maven để sinh file war vào trong folder docker <br>
+
+<plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <executions>
+        <execution>
+            <goals>
+                <goal>repackage</goal>
+            </goals>
+            <configuration>
+                <mainClass>com.stackify.Application</mainClass>
+                <outputDirectory>${project.basedir}/docker</outputDirectory>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
