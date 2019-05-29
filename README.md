@@ -17,7 +17,7 @@ CMD ["/usr/bin/java", "-jar", "-Dspring.profiles.active=default", "/app.war"] //
 
 ## Bước 3 : Cấu hình maven để sinh file war vào trong folder docker <br>
 
-<plugin>
+ <plugin>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-maven-plugin</artifactId>
     <executions>
@@ -31,4 +31,4 @@ CMD ["/usr/bin/java", "-jar", "-Dspring.profiles.active=default", "/app.war"] //
             </configuration>
         </execution>
     </executions>
-</plugin>
+ </plugin>
