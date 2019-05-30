@@ -48,3 +48,15 @@ docker build -t spring-boot-app:latest .
 docker run -d  -p 8080:8080 spring-boot-app:latest  <br>
 + Kiểm tra xem container đã lên chưa  <br>
 docker ps <br>
+
+## Để kết nối với mysql ta sẽ start mysql container riêng cho mysql để ứng dụng mình có thể kết nối db <br>
++ Run database từ docker bằng lệnh
+    docker run -d \
+      -p 2012:3306 \
+      --name mysql-docker-container \
+      -e MYSQL_ROOT_PASSWORD=root123 \
+      -e MYSQL_DATABASE=spring_app_db \
+      -e MYSQL_USER=app_user \
+      -e MYSQL_PASSWORD=test123 \
+        mysql:latest
+
