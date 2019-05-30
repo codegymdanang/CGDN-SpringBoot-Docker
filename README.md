@@ -32,3 +32,6 @@ CMD ["/usr/bin/java", "-jar", "-Dspring.profiles.active=default", "/app.war"] //
         </execution>
      </executions>
     </plugin>
+
+## Docker for beginner
+https://github.com/docker/labs/tree/master/beginner
