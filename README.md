@@ -88,3 +88,5 @@ for example --link mysql-docker-container:mysql, in this case mysql-docker-conta
 <br>
 spring-boot-app : tên image mà chúng ta build docker cho spring boot app 
 
+### Chúng ta có thể đưa image của mình lên online (dockerhub) để cho các developer có thể lấy về. Chi tiết cách làm tại đây
+https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html
